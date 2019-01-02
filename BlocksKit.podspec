@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source                = { :git => 'https://github.com/Piascore/BlocksKit.git', :tag => "v#{s.version}" }
   s.requires_arc          = true
   s.osx.deployment_target = '10.8'
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   s.watchos.deployment_target = '2.0'
 
   s.default_subspec = 'All'

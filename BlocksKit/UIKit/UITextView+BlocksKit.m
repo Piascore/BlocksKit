@@ -96,7 +96,8 @@
 	BOOL ret = YES;
 	id realDelegate = self.realDelegate;
 	if (realDelegate && [realDelegate respondsToSelector:@selector(textView:shouldInteractWithTextAttachment:inRange:)])
-		ret = [realDelegate textView:textView shouldInteractWithTextAttachment:textAttachment inRange:characterRange];
+        ret = [realDelegate textView:textView shouldInteractWithTextAttachment:textAttachment inRange:characterRange interaction:UITextItemInteractionInvokeDefaultAction];
+		//ret = [realDelegate textView:textView shouldInteractWithTextAttachment:textAttachment inRange:characterRange];
 	BOOL (^block)(UITextView *, NSTextAttachment *, NSRange) = [self blockImplementationForMethod:_cmd];
 	if (block)
 		ret &= block(textView, textAttachment, characterRange);
@@ -108,7 +109,8 @@
 	BOOL ret = YES;
 	id realDelegate = self.realDelegate;
 	if (realDelegate && [realDelegate respondsToSelector:@selector(textView:shouldInteractWithURL:inRange:)])
-		ret = [realDelegate textView:textView shouldInteractWithURL:URL inRange:characterRange];
+        ret = [realDelegate textView:textView shouldInteractWithURL:URL inRange:characterRange interaction:UITextItemInteractionInvokeDefaultAction];
+		//ret = [realDelegate textView:textView shouldInteractWithURL:URL inRange:characterRange];
 	BOOL (^block)(UITextView *, NSURL *, NSRange) = [self blockImplementationForMethod:_cmd];
 	if (block)
 		ret &= block(textView, URL, characterRange);
