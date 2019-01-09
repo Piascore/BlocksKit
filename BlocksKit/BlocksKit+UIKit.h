@@ -27,8 +27,8 @@
 
 #import <BlocksKit/BlocksKit.h>
 
-#import <BlocksKit/UIActionSheet+BlocksKit.h>
-#import <BlocksKit/UIAlertView+BlocksKit.h>
+//#import <BlocksKit/UIActionSheet+BlocksKit.h>
+//#import <BlocksKit/UIAlertView+BlocksKit.h>
 #import <BlocksKit/UIBarButtonItem+BlocksKit.h>
 #import <BlocksKit/UIControl+BlocksKit.h>
 #import <BlocksKit/UIGestureRecognizer+BlocksKit.h>
